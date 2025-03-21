@@ -11,7 +11,13 @@ soong_config_module_type {
     config_namespace: "XIAOMI_BIOMETRICS_FINGERPRINT",
     bool_variables: [
         "RUN_32BIT",
+        "USE_NEW_IMPL",
     ],
+    properties: [
+        "compile_multilib",
+        "cflags",
+    ],
+<<<<<<< HEAD
     value_variables: [
         "IMPL_VER",
     ],
@@ -19,6 +25,8 @@ soong_config_module_type {
         "compile_multilib",
         "cppflags",
     ],
+=======
+>>>>>>> 2b30da8 (aidl: fingerprint: Implement new fingerprint methods)
 }
 
 xiaomi_hardware_biometrics_config_default {
@@ -31,8 +39,13 @@ xiaomi_hardware_biometrics_config_default {
             },
             compile_multilib: "prefer32",
         },
+<<<<<<< HEAD
         IMPL_VER: {
             cppflags: ["-DIMPL_%s"],
+=======
+        USE_NEW_IMPL: {
+            cflags: ["-DDEVICE_USES_NEW_IMPLEMENTATION"],
+>>>>>>> 2b30da8 (aidl: fingerprint: Implement new fingerprint methods)
         },
     },
 }
