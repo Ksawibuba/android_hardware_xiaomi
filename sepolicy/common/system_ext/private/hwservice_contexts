@@ -1,3 +1,6 @@
+# Displayfeature
+vendor.xiaomi.hardware.displayfeature::IDisplayFeature    u:object_r:hal_xiaomi_displayfeature_hwservice:s0
+
 # Mlipay
 vendor.xiaomi.hardware.mlipay::IMlipayService       u:object_r:vendor_hal_xiaomi_mlipay_hwservice:s0
 

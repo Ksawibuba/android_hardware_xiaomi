@@ -2,6 +2,10 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi      u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi           u:object_r:hal_fingerprint_default_exec:s0
 
+# Displayfeature
+/(vendor|system/vendor)/bin/displayfeature                                                          u:object_r:displayfeature_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.displayfeature@1\.0-service                u:object_r:hal_xiaomi_displayfeature_default_exec:s0
+
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd@1\.1                                                            u:object_r:vendor_hal_xiaomi_mlipay_default_exec:s0
 

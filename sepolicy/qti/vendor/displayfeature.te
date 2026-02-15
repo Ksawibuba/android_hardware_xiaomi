@@ -1,0 +1,2 @@
+hal_client_domain(displayfeature, vendor_hal_display_color)
+hal_client_domain(displayfeature, vendor_hal_display_postproc)

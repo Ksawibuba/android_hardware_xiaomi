@@ -1,0 +1,5 @@
+# Displayfeature
+genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param         u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/doze_brightness    u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/mipi_rw            u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/panel_info         u:object_r:vendor_sysfs_graphics:s0

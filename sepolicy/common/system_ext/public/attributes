@@ -1,3 +1,6 @@
+# Displayfeature
+hal_attribute(xiaomi_displayfeature)
+
 # Mlipay
 vendor_hal_attribute(xiaomi_mlipay)
 
