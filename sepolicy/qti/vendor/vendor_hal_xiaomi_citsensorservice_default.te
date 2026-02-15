@@ -1,0 +1,4 @@
+allow vendor_hal_xiaomi_citsensorservice_default vendor_persist_sensors_file:dir create_dir_perms;
+allow vendor_hal_xiaomi_citsensorservice_default vendor_persist_sensors_file:file create_file_perms;
+
+get_prop(vendor_hal_xiaomi_citsensorservice_default, vendor_sensors_prop)
