@@ -10,6 +10,7 @@
 
 # Sensors
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@2\.1-service\.xiaomi-multihal             u:object_r:hal_sensors_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal                  u:object_r:hal_sensors_default_exec:s0
 
 # Touch
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi                          u:object_r:hal_lineage_touch_default_exec:s0
