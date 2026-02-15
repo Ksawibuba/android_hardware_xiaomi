@@ -1,1 +1,2 @@
 type ir_device, dev_type;
+type touchfeature_device, dev_type;

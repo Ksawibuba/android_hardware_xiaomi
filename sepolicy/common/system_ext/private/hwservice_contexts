@@ -6,3 +6,6 @@ vendor.xiaomi.hardware.mlipay::IMlipayService       u:object_r:vendor_hal_xiaomi
 
 # Motor
 vendor.xiaomi.hardware.motor::IMotor                u:object_r:vendor_hal_xiaomi_motor_hwservice:s0
+
+# Touchfeature
+vendor.xiaomi.hw.touchfeature::ITouchFeature        u:object_r:hal_touchfeature_xiaomi_hwservice:s0
