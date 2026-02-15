@@ -28,3 +28,6 @@ ro.vendor.xiaomi.bl.poll                     u:object_r:vendor_displayfeature_pr
 vendor.display.disable_dynamic_sf_idle       u:object_r:vendor_displayfeature_prop:s0
 vendor.displayfeature.entry.enable           u:object_r:vendor_displayfeature_prop:s0
 vendor.hbm.enable                            u:object_r:vendor_displayfeature_prop:s0
+
+# Thermal
+vendor.sys.thermal.data.path    u:object_r:vendor_thermal_normal_prop:s0
