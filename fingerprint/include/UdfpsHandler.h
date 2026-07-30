@@ -7,17 +7,10 @@
 #pragma once
 
 #include <stdint.h>
-<<<<<<< HEAD
-#ifndef IMPL_V2
-#include "fingerprint.h"
-#else
-#include "fingerprint-v2.h"
-=======
 #ifndef DEVICE_USES_NEW_IMPLEMENTATION
 #include "fingerprint-legacy.h"
 #else
 #include "fingerprint.h"
->>>>>>> 2b30da8 (aidl: fingerprint: Implement new fingerprint methods)
 #endif
 
 class UdfpsHandler {
