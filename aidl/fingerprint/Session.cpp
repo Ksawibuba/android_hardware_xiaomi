@@ -404,14 +404,10 @@ void Session::notify(const fingerprint_msg_t* msg) {
             enrollments.push_back(msg->data.removed.finger.fid);
             mCb->onEnrollmentsRemoved(enrollments);
 #else
-            std::vector<int32_t> enrollments;
-            enrollments.reserve(NUM_FINGERS);
-            for (unsigned int i = 0; i < NUM_FINGERS; i++) {
-                int32_t fid = msg->data.removed.fingers[i].fid;
-                if (!fid) break;
-                ALOGD("onRemove(fid=%d)", fid);
-                enrollments.push_back(fid);
-            }
+            ALOGD("onRemove(fid=%d, rem=%d)", msg->data.removed.finger.fid,
+                  msg->data.removed.remaining_templates);
+            std::vector<int> enrollments;
+            enrollments.push_back(msg->data.removed.finger.fid);
             mCb->onEnrollmentsRemoved(enrollments);
 #endif
         } break;
@@ -451,15 +447,14 @@ void Session::notify(const fingerprint_msg_t* msg) {
                 enrollments.clear();
             }
 #else
-            std::vector<int32_t> enrollments;
-            enrollments.reserve(NUM_FINGERS);
-            for (unsigned int i = 0; i < NUM_FINGERS; i++) {
-                int32_t fid = msg->data.enumerated.fingers[i].fid;
-                if (!fid) break;
-                ALOGD("onEnumerate(fid=%d)", fid);
-                enrollments.push_back(fid);
+            ALOGD("onEnumerate(fid=%d, rem=%d)", msg->data.enumerated.finger.fid,
+                  msg->data.enumerated.remaining_templates);
+            static std::vector<int> enrollments;
+            enrollments.push_back(msg->data.enumerated.finger.fid);
+            if (msg->data.enumerated.remaining_templates == 0) {
+                mCb->onEnrollmentsEnumerated(enrollments);
+                enrollments.clear();
             }
-            mCb->onEnrollmentsEnumerated(enrollments);
 #endif
         } break;
 #ifdef DEVICE_USES_NEW_IMPLEMENTATION
